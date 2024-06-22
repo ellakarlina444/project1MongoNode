@@ -1,0 +1,29 @@
+to install mongo db shell
+https://www.mongodb.com/try/download/shell
+
+set environment variabel mongosh dan mongod db di path
+
+run di command line "mongosh"
+check if connect or not
+
+query:
+show databases->to show database;
+use mybrary->to create database;
+db.items.insert({name:"oktaviani ella karlina"});->to insert item "name"
+db.items.find();->to find item
+
+
+GITHUB:
+set up this application with GITHUB in command-> git init
+.gitignore ->file we dont want to use in our git repostary
+.gitignore= node_modules, if they want to install our library in packages.json & packages-lock.json use "npm install"
+
+git add -> check any changin in directory
+git commit -> to make/commit the change to be final/official
+git push -> to make this changes to our remote repository
+
+or
+
+git remote add origin 
+
+git pull -> copy everything from the remote repository to local computer
