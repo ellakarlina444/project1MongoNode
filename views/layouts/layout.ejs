@@ -6,11 +6,8 @@
     <title>Mybrary</title>
 </head>
 <body>
-    before
-    <br>
-    <%- body %>
-    <br>
-    after
-    <br>
+    <%- include('../partials/header.ejs') %>
+    <%- include('../partials/errorMessage.ejs') %>
+    <%- body %> <!--//include everi single of our pages in this body page -->
 </body>
 </html>

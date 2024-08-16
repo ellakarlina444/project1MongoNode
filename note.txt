@@ -27,3 +27,29 @@ or
 git remote add origin 
 
 git pull -> copy everything from the remote repository to local computer
+
+
+
+//installasi yang di perlukan
+-npm i --save-dev dotenv
+-npm i mongoose
+-npm i --save-dev nodemon
+-npm i express ejs express-ejs-layouts
+-npm i body-parser
+
+
+//npm install to install all depedensi di packages.json
+
+
+//EJS INFO
+<% %>  this is not to be output in HTML OF THE CLIENT its only run on the server
+<%- include('_form_fields.ejs')  %> // <%- %> make this as file output
+<%=author.name%> // <%= %> make this as html output
+
+
+//mongoose
+//find-> yaitu seperti select di sql jika find({}) berarti select *
+
+
+
+req.query.name -> yaitu untuk mendapatkan param name contohnya http://localhost:4000/authors?name=ok
