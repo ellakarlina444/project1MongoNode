@@ -6,7 +6,7 @@ const Author=require('../models/author');
 router.get('/',async (req,res)=>{
     let searchOptions={};
     if(req.query.name !== null && req.query.name !== ""){
-        searchOptions.name=new RegExp(req.query.name,'i');//contohnya 'i' (tidak case sensitive) jadi nyari nama john, kalo search jo bakal muncul
+        searchOptions.name=new RegExp(req.query.name,'i');//'i'= (tidak case sensitive),contohnya  jadi nyari nama john, kalo search jo bakal muncul
     }
     try {
         const authors= await Author.find(searchOptions);//select * from tabel authors

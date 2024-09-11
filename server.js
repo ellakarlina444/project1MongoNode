@@ -21,6 +21,7 @@ app.use(bodyParser.urlencoded({limit:'10mb',extended:false}));
 
 const indexRouter=require('./routes/index');
 const authorRouter=require('./routes/authors');
+const bookRouter=require('./routes/books');
 
 const mongoose=require('mongoose');
 mongoose.connect(process.env.DATABASE_URL,{useNewUrlParser:true}); //process.env.DATABASE_URL will be error once 
@@ -34,5 +35,6 @@ db.once('open',()=>console.log('connected to mongoose')); //this will be run onc
 
 app.use('/',indexRouter);
 app.use('/authors',authorRouter);//gonna be authors/  And authors/new
+app.use('/books',bookRouter);//gonna be books/  And books/new
 app.listen(process.env.PORT || 4000); //process.env.PORT-> the server will tell what port are we listening to. 
                                      //for development will listenn to port 3000

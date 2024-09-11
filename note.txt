@@ -18,18 +18,39 @@ set up this application with GITHUB in command-> git init
 .gitignore ->file we dont want to use in our git repostary
 .gitignore= node_modules, if they want to install our library in packages.json & packages-lock.json use "npm install"
 
+git init -> This command is the second step in the command series after you initialize git into your current working repository
 git add -> check any changin in directory
-git commit -> to make/commit the change to be final/official
-git push -> to make this changes to our remote repository
+git commit -m "first commit"-> to make/commit the change to be final/official
+git push -u origin main -> to make this changes to our remote repository
 
 or
 
-git remote add origin 
+git remote add origin /git remote add "origin" git@github.com:ellakarlina444/bakrieWithKeystore -> to link github repository
 
 git pull -> copy everything from the remote repository to local computer
 
 
+STEPS PUSH TO GIT:
+…or create a new repository on the command line
+echo "# bakrieWithKeystore" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/ellakarlina444/bakrieWithKeystore.git
+git push -u origin main
 
+…or push an existing repository from the command line
+git remote add origin https://github.com/ellakarlina444/bakrieWithKeystore.git
+git branch -M main
+git push -u origin main
+
+
+NOTE:
+1. IF ERROR ->error: remote origin already exists.
+use: git remote set-url origin https://github.com/ellakarlina444/bakrieWithKeystore.git
+
+==== END ====
 //installasi yang di perlukan
 -npm i --save-dev dotenv
 -npm i mongoose
@@ -53,3 +74,47 @@ git pull -> copy everything from the remote repository to local computer
 
 
 req.query.name -> yaitu untuk mendapatkan param name contohnya http://localhost:4000/authors?name=ok
+
+
+
+//LIBRARY:
+npm i multer -> ALLOW US to use multi platform which is what file form is ex:in new file of books view :enctype="multipart/form-data"
+
+//start
+const multer=require('multer');
+const upload=multer({
+    dest: ->destination path
+})
+this will automatically create the folder for us
+//end
+
+filepond is a library to save file directly to database
+https://github.com/pqina/filepond
+https://pqina.nl/filepond/docs/api/plugins/file-encode/
+https://pqina.nl/filepond/docs/api/instance/properties/#svg-icons -> style properties
+ex json:
+{
+    "id": "b56kpu6u9",
+    "name": "encoded-file.png",
+    "type": "image/png",
+    "size": 123456,
+    "metadata": {
+        "resize": {
+            "mode": "force",
+            "size": {
+                "width": 200,
+                "height": 200
+            }
+        },
+        "crop": {
+            "rect": {
+                "x": 0.19234,
+                "y": 0,
+                "width": 1,
+                "height": 0.61213
+            },
+            "aspectRatio": 1
+        }
+    },
+    "data": "iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAA..."
+}
